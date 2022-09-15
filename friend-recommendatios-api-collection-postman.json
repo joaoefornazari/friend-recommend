@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "67394c33-5a32-4b36-bc15-efbed6c667ec",
+		"name": "api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19446979"
+	},
+	"item": [
+		{
+			"name": "Create Person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf\":\"22222222222\",\r\n    \"name\":\"John Doe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Person",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/person/:CPF",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"person",
+						":CPF"
+					],
+					"variable": [
+						{
+							"key": "CPF",
+							"value": "12345678909"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clean",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/clean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Relationship",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf1\": \"11111111111\",\r\n    \"cpf2\": \"22222222222\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/relationship",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"relationship"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Recommendations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/recommendations/:CPF",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recommendations",
+						":CPF"
+					],
+					"variable": [
+						{
+							"key": "CPF",
+							"value": "12345678909"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
