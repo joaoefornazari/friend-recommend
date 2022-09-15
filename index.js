@@ -9,7 +9,7 @@ export const app = express()
 const PORT = '3000'
 
 app.get('/', (req, res) => {
-	res.status(200).send()
+	res.status(200).send('Success')
 })
 
 app.set('people', [])
@@ -24,7 +24,7 @@ app.use(
 	'/clean', 
 	express.Router().delete('', (req, res) => {
 		app.set('people', [])
-		res.send(200)
+		res.status(200).send('Success')
 	})
 )
 

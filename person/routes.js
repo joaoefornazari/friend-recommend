@@ -13,7 +13,7 @@ router.post('', async (req, res) => {
 
 	people.push(createPerson({ cpf, name }))
 	req.app.set('people', people)
-	res.status(200).send()
+	res.status(200).send('Success')
 })
 
 router.get('/:CPF', (req, res) => {
