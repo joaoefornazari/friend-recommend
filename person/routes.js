@@ -9,7 +9,10 @@ router.post('', async (req, res) => {
 	const people = req.app.get('people')
 
 	const cpfHasError = verifyCPF(people, cpf)
-	if (cpfHasError !== 3) res.send(400)
+	if (cpfHasError !== 3) {
+		res.send(400)
+		return
+	}
 
 	people.push(createPerson({ cpf, name }))
 	req.app.set('people', people)
